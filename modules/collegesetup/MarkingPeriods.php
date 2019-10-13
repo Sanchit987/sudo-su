@@ -46,7 +46,7 @@ switch($_REQUEST['mp_term'])
 		$table = 'college_years';
 		if($_REQUEST['marking_period_id']=='new')
 			$title = 'New Year';
-	break;
+		break;
 
 	case 'SEM':
 		$table = 'college_semesters';
@@ -54,11 +54,11 @@ switch($_REQUEST['mp_term'])
 			$title = 'New Semester';
 	break;
 
-/*	case 'QTR':
+	case 'QTR':
 		$table = 'college_quarters';
 		if($_REQUEST['marking_period_id']=='new')
                     $title = 'New Quarter';
-		break;*/
+		break;
 
 	case 'PRO':
 		$table = 'college_progress_periods';
@@ -1291,7 +1291,7 @@ if(!$_REQUEST['modfunc'])
                 }
             }
 
-         /*   echo '<div class="col-md-4">';
+            echo '<div class="col-md-4">';
             echo '<div class="panel panel-white">';
             $columns = array('TITLE' => 'Quarter');
             $link = array();
@@ -1309,7 +1309,7 @@ if(!$_REQUEST['modfunc'])
             
             ListOutput($qtr_RET, $columns, 'Quarter', 'Quarters', $link, array(), $LO_options);
             echo '</div>';
-			echo '</div>';*/
+			echo '</div>';
 
             // PROGRESS PERIODS
             if (($_REQUEST['mp_term'] == 'QTR' && $_REQUEST['marking_period_id'] != 'new') || $_REQUEST['mp_term'] == 'PRO') {
